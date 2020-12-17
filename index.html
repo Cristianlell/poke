@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Pokedex</title>
+
+    <style>
+        body {
+            background-color: #fdfdfd;
+            color: rgb(255, 2, 2);
+        }
+        /*         
+        .row {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        } */
+        /* .card {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            text-align: center;
+        } */
+        
+        .card-body {
+            border-radius: 0 0 10px 10px;
+            color: blanchedalmond;
+            align-content: center;
+            background-color: rgba(252, 4, 4, 0.829);
+        }
+        
+        .card-img-top {
+            border: 12px solid rgba(252, 4, 4, 0.829);
+            border-radius: 10px 10px 0 0;
+        }
+        /*         
+        .container {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-top: 1%;
+        }
+        
+        .row {
+            border: 1px solid red;
+            /* margin-left: 1.5rem; */
+        /*         
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .col-6 {
+        max-width: auto;
+    }*/
+        
+        .titulos {
+            font-weight: 600;
+        }
+        
+        .card-title {
+            text-transform: capitalize;
+            text-align: center;
+            font-weight: 700;
+        }
+        /*.btn {
+        background: #fff;
+    }
+
+    
+    .form-control {
+        margin-bottom: 10px;
+        width: 75%;
+    }
+    */
+        
+        .btn:hover {
+            background: rgb(255, 27, 27);
+        }
+        
+        .p {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        
+        @media (max-width: 360px) {
+            .row {
+                display: inline-block;
+                flex-direction: column;
+                align-content: center;
+            }
+            .card-body {
+                flex-direction: column;
+                align-content: center;
+                justify-content: space-between;
+                text-align: center;
+            }
+            .p {
+                width: auto;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 630px) {
+            .row {
+                flex-direction: column;
+                align-content: center;
+            }
+            .card {
+                border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+            }
+        }
+        
+        .altura,
+        .peso,
+        .tipo1,
+        .tipo2 {
+            color: #fffb01;
+            font-weight: 600;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container ocultar">
+        <div class="row">
+            <div class="col-6">
+                <h1>Bienvenido..!</h1>
+                <h3 class="tittle">Se han encontrado <span class="cantidad"></span> Pokémons</h1>
+                    <div>
+                        <p>Ingresa un Id o un nombre para mostrarlo en la pokedex </p>
+                        <div class="cont-input">
+                            <input type="text" class="input form-control" placeholder="Id o nombre">
+                        </div>
+                        <button class="btn btn-outline-secondary">Mostrar</button>
+                    </div>
+            </div>
+            <div class="col-6 ">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/favpng_pokémon-go-psyduck-clip-art.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <div class="p">
+                            <p class="card-text "><span class="titulos">Peso </span> <br><span class="peso">0</span> kg</p>
+                            <p class="card-text"><span class="titulos">Altura </span> <br><span class="altura">0</span> m</p>
+                            <p class="card-text"><span class="titulos">Tipo</span> <br><span class="tipo1"></span> <br><span class="tipo2"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="src/main.js"></script>
+</body>
+
+</html>
